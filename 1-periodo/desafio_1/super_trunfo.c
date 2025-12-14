@@ -67,7 +67,7 @@ int main(){
     printf("Numero de pontos turísticos: ");
     scanf("%d", &pontos_turisticos2);
 
-// imprimir os dados 
+// imprimir os dados na tela
 
     printf("\n===CARTA 1===\n");
     printf("Estado: %c\n", estado1);
