@@ -5,7 +5,9 @@ int main() {
   int idade2 = 30;
 
   if (idade1 > idade2) {
-    printf("Pessoa 1 é mais velha que Pessoa 2\n");
+    printf("Pessoa 1 é mais velha que pessoa 2\n");
+  } else {
+    printf("Pessoa 2 é mais velha que pessoa 1\n");
   }
 
   return 0;

@@ -6,6 +6,8 @@ int main() {
 
     if (numero1 > numero2) {
         printf("numero1 é maior que numero2\n");
+    } else {
+        printf("numero2 é maior que numero1\n");
     }
     return 0;
 }
