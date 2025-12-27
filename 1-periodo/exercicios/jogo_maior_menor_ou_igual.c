@@ -47,5 +47,8 @@ int main() {
     } else {
         printf("Que pena! Você perdeu!\n");
     }
+
+    getchar();
+    getchar();
     return 0;
 }
