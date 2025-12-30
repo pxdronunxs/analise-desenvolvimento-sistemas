@@ -1,24 +1,28 @@
 #include <stdio.h>
 
-int main () {
-    printf("Movimentação de Peças de Xadrez\n");
+int main() {
+
+    // simulação de movimentação das peças de xadrez
 
     int torre = 5;
     int bispo = 5;
     int rainha;
 
+    // movimento da Torre: 5 casas para a direita (while)
     while (torre > 0) {
-        printf("Torre: Direita\n");
+        printf("Direita\n");
         torre--;
     }
 
+    // movimento do Bispo: 5 casas na diagonal (do-while)
     do {
-        printf("Bispo: Cima, Direita\n");
+        printf("Cima Direita\n");
         bispo--;
     } while (bispo > 0);
 
+    // movimento da Rainha: 8 casas para a esquerda (for)
     for (rainha = 8; rainha > 0; rainha--) {
-        printf("Rainha: Esquerda\n");
+        printf("Esquerda\n");
     }
 
     return 0;
