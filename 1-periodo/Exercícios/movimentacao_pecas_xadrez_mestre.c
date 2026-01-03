@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-/* ================= TORRE (RECURSIVA) ================= */
+//================= TORRE (RECURSIVA) =================
 void moverTorre(int casas) {
     if (casas == 0) {
         return;
     }
-
     printf("Direita\n");
     moverTorre(casas - 1);
 }
 
-/* ================= BISPO (RECURSIVO + LOOPS ANINHADOS) ================= */
+//================= BISPO (RECURSIVO + LOOPS ANINHADOS) =================
 void moverBispo(int casas) {
     if (casas == 0) {
         return;
@@ -18,7 +17,7 @@ void moverBispo(int casas) {
 
     int horizontal = 1;
 
-    /* Loop interno: movimento horizontal */
+    //Loop interno: movimento horizontal
     while (horizontal > 0) {
         printf("Cima ");
         horizontal--;
@@ -26,26 +25,25 @@ void moverBispo(int casas) {
 
     printf("Direita\n");
 
-    /* Chamada recursiva controla o movimento vertical */
+    //Chamada recursiva controla o movimento vertical
     moverBispo(casas - 1);
 }
 
-/* ================= RAINHA (RECURSIVA) ================= */
+//================= RAINHA (RECURSIVA) =================
 void moverRainha(int casas) {
     if (casas == 0) {
         return;
     }
-
     printf("Esquerda\n");
     moverRainha(casas - 1);
 }
 
-/* ================= CAVALO (LOOPS COMPLEXOS) ================= */
+//================= CAVALO (LOOPS COMPLEXOS) =================
 void moverCavalo() {
     int movimentosVerticais = 2;
     int movimentosHorizontais = 1;
 
-    /* Loop externo: movimento vertical */
+    //Loop externo: movimento vertical
     for (int i = 0; i < movimentosVerticais; i++) {
         printf("Cima\n");
 
@@ -54,7 +52,7 @@ void moverCavalo() {
         }
     }
 
-    /* Loop horizontal */
+    //Loop horizontal
     int j = 0;
     while (j < movimentosHorizontais) {
         printf("Direita\n");
@@ -62,22 +60,21 @@ void moverCavalo() {
     }
 }
 
-/* ================= MAIN ================= */
 int main(void) {
 
-    /* Torre */
+    //Torre
     moverTorre(5);
     printf("\n");
 
-    /* Bispo */
+    //Bispo
     moverBispo(5);
     printf("\n");
 
-    /* Rainha */
+    //Rainha 
     moverRainha(8);
     printf("\n");
 
-    /* Cavalo */
+    //Cavalo
     moverCavalo();
 
     return 0;
