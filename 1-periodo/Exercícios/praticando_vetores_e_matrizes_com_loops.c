@@ -66,28 +66,55 @@
 
 //soma de matrizes
 
-#include <stdio.h>
+// #include <stdio.h>
 
-int main() {
-    int matriz1[2][2] = {{1, 2}, {3, 4}};
-    int matriz2[2][2] = {{3, 4}, {5, 6}};
-    int matrizSoma[2][2];
+// int main() {
+//     int matriz1[2][2] = {{1, 2}, {3, 4}};
+//     int matriz2[2][2] = {{3, 4}, {5, 6}};
+//     int matrizSoma[2][2];
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            matrizSoma[i][j] = matriz1[i][j] + matriz2[i][j];
-        }
-    }
+//     for (int i = 0; i < 2; i++) {
+//         for (int j = 0; j < 2; j++) {
+//             matrizSoma[i][j] = matriz1[i][j] + matriz2[i][j];
+//         }
+//     }
 
-    //exibir matriz resultante
+//     //exibir matriz resultante
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 2; j++) {
-            printf("matrizSoma[%d][%d] = %d\n", i, j,
-            matrizSoma[i][j]);
-        }
-    }
+//     for (int i = 0; i < 2; i++) {
+//         for (int j = 0; j < 2; j++) {
+//             printf("matrizSoma[%d][%d] = %d\n", i, j,
+//             matrizSoma[i][j]);
+//         }
+//     }
     
+
+//     return 0;
+// }
+
+/*===================================================*/
+
+#include <stdio.h>
+#define LINHAS 15
+#define COLUNAS 15
+
+
+int main(void) {
+
+    int matriz[LINHAS][COLUNAS];
+    
+    int soma = 0;
+
+    for (int i = 0; i < LINHAS; i++) {
+        for (int j = 0; j < COLUNAS; j++) {
+        
+            soma++;
+            matriz[i][j] = soma;
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
 
     return 0;
 }
