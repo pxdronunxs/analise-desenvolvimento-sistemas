@@ -15,7 +15,7 @@ int main() {
     if (colunaH + tamanhoNavio <= 10) {
         int podeColocar = 1;
 
-        // verificar sobreposição
+        // verificar sbreposição
         for (int i = 0; i < tamanhoNavio; i++) {
             if (tabuleiro[linhaH][colunaH + i] != 0) {
                 podeColocar = 0;
