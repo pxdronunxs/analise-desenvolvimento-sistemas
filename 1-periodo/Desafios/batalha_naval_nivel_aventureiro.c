@@ -10,6 +10,49 @@ int main() {
     // coordenadas iniciais
     int linhaH = 2, colunaH = 4; // navio horizontal
     int linhaV = 5, colunaV = 1; // navio vertical
+    int linhaD = 5, colunaD = 3; // 1º navio diagonal
+    int linhaDD = 0, colunaDD = 3; // 2º navio diagonal
+
+    // posicionamento do 1º navio diagonal
+    if (linhaD + tamanhoNavio <= 10 && colunaD + tamanhoNavio <= 10) {
+
+    int podeColocar = 1;
+
+    // verificar sobreposição
+    for (int i = 0; i < tamanhoNavio; i++) {
+        if (tabuleiro[linhaD + i][colunaD + i] != 0) {
+            podeColocar = 0;
+        }
+    }
+
+    // se não houver sobreposição, posiciona
+    if (podeColocar) {
+        for (int i = 0; i < tamanhoNavio; i++) {
+            tabuleiro[linhaD + i][colunaD + i] = 3;
+        }
+    }
+}
+
+    // posicionamento do 2º navio diagonal
+    if (linhaDD + tamanhoNavio <= 10 && colunaDD + tamanhoNavio <= 10) {
+
+    int podeColocar = 1;
+
+    //verificar sobreposição
+    for (int i = 0; i < tamanhoNavio; i++) {
+        if (tabuleiro[linhaDD + i][colunaDD - i] != 0) {
+            podeColocar = 0;
+        }
+    }
+    // se nao houver sobreposicao, posiciona
+    if (podeColocar) {
+        for (int i = 0; i < tamanhoNavio; i++) {
+            tabuleiro[linhaDD + i][colunaDD - i] = 3;
+        }
+    }
+        
+}
+
 
     // posicionamento do navio horizontal
     if (colunaH + tamanhoNavio <= 10) {
@@ -46,8 +89,6 @@ int main() {
             }
         }
     }
-
-    
 
     // impressão da interface
     printf("    ");
